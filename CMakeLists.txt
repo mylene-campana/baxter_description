@@ -42,7 +42,7 @@ install(FILES srdf/baxter.srdf
 
 # robot dae files
   
-install(FILES meshes/*
+install(DIRECTORY meshes/
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes)
 
 # robot hpp-corbaserver files
