@@ -211,4 +211,15 @@
 <disable_collisions link1="left_upper_forearm_visual"
 		      link2="left_gripper_base" />
 
+<!-- collision that appeared with true meshes (and not capsules) -->
+<disable_collisions link1="left_upper_shoulder"
+		      link2="collision_head_link_1" />
+<disable_collisions link1="right_upper_shoulder"
+		      link2="collision_head_link_1" />
+<disable_collisions link1="left_upper_shoulder"
+		      link2="collision_head_link_2" />
+<disable_collisions link1="right_upper_shoulder"
+		      link2="collision_head_link_2" />
+<disable_collisions link1="torso"
+		      link2="screen" />
 </robot>
