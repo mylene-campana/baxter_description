@@ -1,0 +1,19 @@
+<launch>
+  <param name="robot_description" command="cat $(find baxter_description)/urdf/baxter.urdf"/>
+
+  <node name="map_link_broadcaster"
+    pkg="tf" type="static_transform_publisher"  
+    args="0 0 0 0 0 0 /base_link /map 1000"/>
+
+  <node name="robot_state_publisher"
+	pkg="robot_state_publisher"
+	type="state_publisher"
+	respawn="true">
+    <param name="tf_prefix" value="" />
+  </node>
+  <node name="rviz"
+	pkg="rviz"
+	type="rviz"
+	respawn="false">
+  </node>
+</launch>
